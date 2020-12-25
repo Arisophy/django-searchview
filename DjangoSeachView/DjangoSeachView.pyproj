@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>DjangoSeachView</Name>
+    <RootNamespace>DjangoSeachView</RootNamespace>
+    <TestFramework>unittest</TestFramework>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4c71faad-9a2f-4236-80bf-361a0570c7aa</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>DjangoSeachView.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="sample_app\forms.py" />
+    <Compile Include="sample_app\models.py" />
+    <Compile Include="sample_app\tests.py" />
+    <Compile Include="sample_app\views.py" />
+    <Compile Include="sample_app\__init__.py" />
+    <Compile Include="sample_app\migrations\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="DjangoSeachView\__init__.py" />
+    <Compile Include="DjangoSeachView\settings.py" />
+    <Compile Include="DjangoSeachView\urls.py" />
+    <Compile Include="DjangoSeachView\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="lib\forms\" />
+    <Folder Include="lib\views\" />
+    <Folder Include="sample_app\" />
+    <Folder Include="sample_app\migrations\" />
+    <Folder Include="sample_app\static\" />
+    <Folder Include="sample_app\static\app\" />
+    <Folder Include="sample_app\static\app\content\" />
+    <Folder Include="sample_app\static\app\fonts\" />
+    <Folder Include="sample_app\static\app\scripts\" />
+    <Folder Include="sample_app\templates\" />
+    <Folder Include="sample_app\templates\app\" />
+    <Folder Include="DjangoSeachView\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="sample_app\static\app\content\bootstrap.css" />
+    <Content Include="sample_app\static\app\content\bootstrap.min.css" />
+    <Content Include="sample_app\static\app\content\site.css" />
+    <Content Include="sample_app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="sample_app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="sample_app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="sample_app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="sample_app\static\app\scripts\bootstrap.js" />
+    <Content Include="sample_app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="sample_app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="sample_app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="sample_app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="sample_app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="sample_app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="sample_app\static\app\scripts\jquery.validate.js" />
+    <Content Include="sample_app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="sample_app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="sample_app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="sample_app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="sample_app\static\app\scripts\respond.js" />
+    <Content Include="sample_app\static\app\scripts\respond.min.js" />
+    <Content Include="sample_app\static\app\scripts\_references.js" />
+    <Content Include="sample_app\templates\app\about.html" />
+    <Content Include="sample_app\templates\app\contact.html" />
+    <Content Include="sample_app\templates\app\index.html" />
+    <Content Include="sample_app\templates\app\layout.html" />
+    <Content Include="sample_app\templates\app\login.html" />
+    <Content Include="sample_app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
