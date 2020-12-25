@@ -1,5 +1,3 @@
-# My library for Django: View 
-
 from django.db.models import QuerySet,Q
 from django.http.response import Http404
 from django.views.generic.base import TemplateResponseMixin
@@ -13,7 +11,7 @@ class BaseSearchView(BaseListView, BaseFormView):
     first_display_all_list = False
 
     def get(self, request, *args, **kwargs):
-
+        """ First Display """
         page_kwarg = self.page_kwarg
         page = self.kwargs.get(page_kwarg) or self.request.GET.get(page_kwarg) or None
         if page is None:

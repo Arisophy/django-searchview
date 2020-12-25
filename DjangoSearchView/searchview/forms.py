@@ -1,5 +1,3 @@
-# My library for Django: Form 
-
 from django.forms import Form
 
 class SearchForm(Form):
