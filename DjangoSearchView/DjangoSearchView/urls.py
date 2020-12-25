@@ -1,12 +1,12 @@
 """
-Definition of urls for DjangoSeachView.
+Definition of urls for DjangoSearchView.
 """
 
 from datetime import datetime
 from django.urls import path
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
-from app import forms, views
+from sample import forms, views
 
 
 urlpatterns = [

@@ -1,5 +1,5 @@
 """
-Django settings for DjangoSeachView project.
+Django settings for DjangoSearchView project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
 
@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
 INSTALLED_APPS = [
-    'app',
+    'sample',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'DjangoSeachView.urls'
+ROOT_URLCONF = 'DjangoSearchView.urls'
 
 # Template configuration
 # https://docs.djangoproject.com/en/2.1/topics/templates/
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'DjangoSeachView.wsgi.application'
+WSGI_APPLICATION = 'DjangoSearchView.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {
