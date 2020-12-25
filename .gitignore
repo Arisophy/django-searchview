@@ -339,3 +339,5 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /DjangoSearchView/env
+/DjangoSearchView/obj
+/DjangoSearchView/static/admin
