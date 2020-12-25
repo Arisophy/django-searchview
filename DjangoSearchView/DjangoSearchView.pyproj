@@ -57,8 +57,6 @@
     <Folder Include="sample\static\" />
     <Folder Include="sample\static\app\" />
     <Folder Include="sample\static\app\content\" />
-    <Folder Include="sample\static\app\fonts\" />
-    <Folder Include="sample\static\app\scripts\" />
     <Folder Include="sample\templates\" />
     <Folder Include="sample\templates\app\" />
     <Folder Include="DjangoSearchView\" />
@@ -67,28 +65,7 @@
   <ItemGroup>
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
-    <Content Include="sample\static\app\content\bootstrap.css" />
-    <Content Include="sample\static\app\content\bootstrap.min.css" />
     <Content Include="sample\static\app\content\site.css" />
-    <Content Include="sample\static\app\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="sample\static\app\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="sample\static\app\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="sample\static\app\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="sample\static\app\scripts\bootstrap.js" />
-    <Content Include="sample\static\app\scripts\bootstrap.min.js" />
-    <Content Include="sample\static\app\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="sample\static\app\scripts\jquery-1.10.2.js" />
-    <Content Include="sample\static\app\scripts\jquery-1.10.2.min.js" />
-    <Content Include="sample\static\app\scripts\jquery-1.10.2.min.map" />
-    <Content Include="sample\static\app\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="sample\static\app\scripts\jquery.validate.js" />
-    <Content Include="sample\static\app\scripts\jquery.validate.min.js" />
-    <Content Include="sample\static\app\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="sample\static\app\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="sample\static\app\scripts\modernizr-2.6.2.js" />
-    <Content Include="sample\static\app\scripts\respond.js" />
-    <Content Include="sample\static\app\scripts\respond.min.js" />
-    <Content Include="sample\static\app\scripts\_references.js" />
     <Content Include="sample\templates\app\musician.html" />
     <Content Include="sample\templates\app\album.html" />
     <Content Include="sample\templates\app\layout.html" />
