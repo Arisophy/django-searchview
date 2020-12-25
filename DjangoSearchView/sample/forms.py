@@ -42,6 +42,7 @@ class MusicianSearchForm(SearchForm):
     album_count__gte = forms.IntegerField(
         label='album_count >=',
         required = False,
+        initial=1,
         min_value=0,
         max_value=999,
     )
@@ -74,7 +75,7 @@ class AlbumSearchForm(SearchForm):
         label='stars >=',
         required = False,
         min_value=0,
-        max_value=999,
+        max_value=5,
     )
     artist__first_name__contains = forms.CharField(
         label="Musician.first_name like '%val%'",
