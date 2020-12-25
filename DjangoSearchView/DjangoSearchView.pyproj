@@ -89,7 +89,8 @@
     <Content Include="sample\static\app\scripts\respond.js" />
     <Content Include="sample\static\app\scripts\respond.min.js" />
     <Content Include="sample\static\app\scripts\_references.js" />
-    <Content Include="sample\templates\app\index.html" />
+    <Content Include="sample\templates\app\musician.html" />
+    <Content Include="sample\templates\app\album.html" />
     <Content Include="sample\templates\app\layout.html" />
     <Content Include="sample\templates\app\login.html" />
     <Content Include="sample\templates\app\loginpartial.html" />

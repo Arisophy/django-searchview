@@ -10,7 +10,7 @@
 {% else %}
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="{% url 'login' %}">Log in</a></li>
+    <li class="nav-item {% if url_name == 'login' %}active{% endif %}"><a class="nav-link" href="{% url 'login' %}">Log in</a></li>
 </ul>
 
 {% endif %}

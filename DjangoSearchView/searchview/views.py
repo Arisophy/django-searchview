@@ -36,9 +36,12 @@ class BaseSearchView(BaseListView, BaseFormView):
                 page = self.kwargs.get(page_kwarg) or self.request.POST.get(page_kwarg) or 1
                 self.kwargs[page_kwarg] = page        
             self.cleaned_data = form.cleaned_data
-            return super().get(request, *args, **kwargs)
         else:
-            return self.form_invalid(form)
+            self.cleaned_data = {}
+            self.cleaned_data['pk'] = None
+            kwargs['form'] = form
+        return super().get(request, *args, **kwargs)
+
 
     def get_queryset(self):
         # disable ordering and get base queryset

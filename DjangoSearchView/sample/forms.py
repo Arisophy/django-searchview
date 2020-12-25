@@ -29,13 +29,13 @@ class MusicianSearchForm(SearchForm):
         required = False,
         max_length=50,
     )
-    last_name__contains = forms.CharField(
-        label="lasst_name like '%val%'",
+    last_name__istartswith = forms.CharField(
+        label="last_name like 'val%'",
         required = False,
         max_length=50,
     )
-    instrument__istartswith = forms.CharField(
-        label="instrument like 'val%'",
+    instrument__contains = forms.CharField(
+        label="instrument like '%val%'",
         required = False,
         max_length=32,
     )
@@ -55,8 +55,8 @@ class MusicianSearchForm(SearchForm):
 class AlbumSearchForm(SearchForm):
     """Search for Albums."""
 
-    name__istartswith = forms.CharField(
-        label="name like 'val%'",
+    name__contains = forms.CharField(
+        label="name like '%val%'",
         required = False,
         max_length=100,
     )
@@ -69,6 +69,12 @@ class AlbumSearchForm(SearchForm):
         label='release_date <=',
         required = False,
         widget=DateInput(),
+    )
+    num_stars__gte = forms.IntegerField(
+        label='stars >=',
+        required = False,
+        min_value=0,
+        max_value=999,
     )
     artist__first_name__contains = forms.CharField(
         label="Musician.first_name like '%val%'",

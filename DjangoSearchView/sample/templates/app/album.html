@@ -1,0 +1,90 @@
+{% extends "app/layout.html" %}
+
+{% block title %}Test SearchView(1) {% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Test SearchView</h1>
+    <p class="lead">Test For SearchView(1) : Album</p>
+    <p><a href="{% url 'musician' %}" class="btn btn-primary btn-large">Musician Test &raquo;</a></p>
+</div>
+
+<div class="row">
+   <div class="col-md-6">
+        <h2>Search Condition</h2>
+        <div class="table-responsive">
+          <form method="post" id="search_form">
+            {% csrf_token %}
+            <table class="table table-striped table-sm">
+              <tbody>
+              {{ form.as_table }}
+              </tbody>
+            </table>
+            <p class="text-center"><input class="btn btn-primary" type="submit" value="Search"></p>
+            <input id="pagenation_page" type="hidden" name="page" />
+          </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>Search Results(Album)</h2>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>name</th>
+                <th>release_date</th>
+                <th>num_stars</th>
+                <th>artist</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for album in object_list %}
+              <tr>
+                <td>{{ album.id }}</td>
+                <td>{{ album.name }}</td>
+                <td>{{ album.release_date }}</td>
+                <td>{{ album.num_stars }}</td>
+                <td>{{ album.artist.first_name }}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <span class="step-links">
+              {% if page_obj.has_previous %}
+                  <button type="submit" class="page-btn" value="1">&laquo; first</button>
+                  <button type="submit" class="page-btn" value="{{ page_obj.previous_page_number }}">previous</button>
+              {% endif %}
+
+              <span class="current">
+                  Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+              </span>
+
+              {% if page_obj.has_next %}
+                  <button type="submit" class="page-btn" value="{{ page_obj.next_page_number }}">next</button>
+                  <button type="submit" class="page-btn" value="{{ page_obj.paginator.num_pages }}">last &raquo;</button>
+              {% endif %}
+          </span>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  $(function(){
+    $('.page-btn').click(function(){
+      var form1 = document.forms['search_form'];
+      var pageno = $(this).val();
+      $('#pagenation_page').val(pageno);
+      form1.submit();
+      return false;
+    });
+  })
+ </script>
+{% endblock %}
+
