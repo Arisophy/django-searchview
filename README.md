@@ -12,6 +12,10 @@ see below.
 
 Code is simple and less than 100 steps. But it's very useful.
 
+## Install
+
+  pip install django-serachview-lib
+
 ## How To Use
 
 https://gijutsu.com/en/2020/12/29/django-searchview-class/
