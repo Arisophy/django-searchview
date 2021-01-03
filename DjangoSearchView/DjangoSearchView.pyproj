@@ -50,6 +50,7 @@
     <Compile Include="DjangoSearchView\wsgi.py" />
     <Compile Include="searchview\forms.py" />
     <Compile Include="searchview\views.py" />
+    <Compile Include="searchview\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="sample\" />
