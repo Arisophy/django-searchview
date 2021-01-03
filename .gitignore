@@ -341,4 +341,3 @@ healthchecksdb
 /DjangoSearchView/env
 /DjangoSearchView/obj
 /DjangoSearchView/static/admin
-/django-searchview
