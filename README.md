@@ -1,5 +1,5 @@
 # django-searchview
-SearchView is a multiple inheritance class of Form and ListView 
+SearchView is a multiple inheritance class of FormView and ListView 
 
 When I wanted to make a Search Page with class based View of Django, the first choice was using FormView and ListView.
 But, I wanted to display search form and results list in one page.
