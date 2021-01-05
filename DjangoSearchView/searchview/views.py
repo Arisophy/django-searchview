@@ -32,11 +32,13 @@ class BaseSearchView(BaseListView, BaseFormView):
         form = self.get_form()
         if form.is_valid():
             self.cleaned_data = form.cleaned_data
-            if self.cleaned_data != request.session['_cleaned_data']:
-                self.kwargs[page_kwarg] = 1
-            else:
+            new = self.cleaned_data
+            old = request.session['_cleaned_data']
+            if all(old[key] == new[key] for key in old):
                 page = self.kwargs.get(page_kwarg) or self.request.POST.get(page_kwarg) or 1
                 self.kwargs[page_kwarg] = page        
+            else:
+                self.kwargs[page_kwarg] = 1
         else:
             self.cleaned_data = {}
             self.cleaned_data['pk'] = None
