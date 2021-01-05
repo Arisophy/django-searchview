@@ -18,6 +18,7 @@ class BaseSearchView(BaseListView, BaseFormView):
             """ First Page """
             form = self.get_form()
             self.cleaned_data = form.get_initial_data()
+            request.session['_cleaned_data'] = self.cleaned_data
             if not self.first_display_all_list:
                 self.cleaned_data['pk'] = None
             return super().get(request, *args, **kwargs)
@@ -30,18 +31,18 @@ class BaseSearchView(BaseListView, BaseFormView):
         page_kwarg = self.page_kwarg
         form = self.get_form()
         if form.is_valid():
-            if form.has_changed():
+            self.cleaned_data = form.cleaned_data
+            if self.cleaned_data != request.session['_cleaned_data']:
                 self.kwargs[page_kwarg] = 1
             else:
                 page = self.kwargs.get(page_kwarg) or self.request.POST.get(page_kwarg) or 1
                 self.kwargs[page_kwarg] = page        
-            self.cleaned_data = form.cleaned_data
         else:
             self.cleaned_data = {}
             self.cleaned_data['pk'] = None
             kwargs['form'] = form
+        request.session['_cleaned_data'] = self.cleaned_data
         return super().get(request, *args, **kwargs)
-
 
     def get_queryset(self):
         # disable ordering and get base queryset
