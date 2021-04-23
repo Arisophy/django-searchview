@@ -14,7 +14,7 @@ Code is simple and less than 100 steps. But it's very useful.
 
 ## Install
 
-  pip install django-serachview-lib
+  pip install django-searchview-lib
 
 ## How To Use
 
