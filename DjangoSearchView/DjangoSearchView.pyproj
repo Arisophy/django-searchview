@@ -70,8 +70,6 @@
     <Content Include="sample\templates\app\musician.html" />
     <Content Include="sample\templates\app\album.html" />
     <Content Include="sample\templates\app\layout.html" />
-    <Content Include="sample\templates\app\login.html" />
-    <Content Include="sample\templates\app\loginpartial.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">
@@ -81,8 +79,8 @@
   <ItemGroup>
     <Interpreter Include="env\">
       <Id>env</Id>
-      <Version>3.7</Version>
-      <Description>env (Python 3.7 (64-bit))</Description>
+      <Version>3.9</Version>
+      <Description>env (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
