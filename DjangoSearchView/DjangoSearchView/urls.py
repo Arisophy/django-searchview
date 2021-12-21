@@ -10,14 +10,6 @@ from sample import forms, views
 
 
 urlpatterns = [
-    path('login/',
-         LoginView.as_view
-         (
-             template_name='app/login.html',
-             authentication_form=forms.BootstrapAuthenticationForm,
-         ),
-         name='login'),
-    path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
     # Test
     path('', views.AlbumSearchListView.as_view(), name='album'),
