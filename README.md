@@ -16,7 +16,7 @@ Code is simple and less than 100 steps. But it's very useful.
 
   pip install django-searchview-lib
 
-[![Downloads](https://pepy.tech/badge/django-searchview-lib)](https://pepy.tech/project/django-searchview-lib)
+[![Downloads](https://static.pepy.tech/badge/django-searchview-lib)](https://pepy.tech/project/django-searchview-lib)
 
 ## How To Use
 
